@@ -1,12 +1,12 @@
 web:
-  image: manicmonkey/docker-youtrack
+  image: manicmonkey/youtrack
   volumes_from:
     - data
   ports:
     - "8080:8080"
 
 data:
-  image: manicmonkey/docker-youtrack
+  image: manicmonkey/youtrack
   container_name: youtrack_data
   volumes:
     - /data
