@@ -1,4 +1,4 @@
-FROM manicmonkey/docker-jdk:8
+FROM manicmonkey/jdk:8
 MAINTAINER James Baxter <j.w.baxter@gmail.com>
 
 # Download youtrack
