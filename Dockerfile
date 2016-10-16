@@ -1,9 +1,10 @@
-FROM manicmonkey/jdk:8
+FROM manicmonkey/docker-jdk:8
 MAINTAINER James Baxter <j.w.baxter@gmail.com>
 
 # Download youtrack
 WORKDIR /opt
-RUN wget -O youtrack.jar http://download.jetbrains.com/charisma/youtrack-6.5.17015.jar
+RUN apt-get update -q && apt-get install wget -qqy
+RUN wget -O youtrack.jar https://download.jetbrains.com/charisma/youtrack-7.0.27705.jar
 
 VOLUME ["/data"]
 EXPOSE 8080

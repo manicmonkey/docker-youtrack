@@ -1,13 +1,13 @@
-data:
-  build: .
-  container_name: youtrack_data
-  volumes:
-    - /data
-  entrypoint: /bin/bash
-      
-youtrack:
-  build: .
+web:
+  image: manicmonkey/docker-youtrack
   volumes_from:
     - data
   ports:
     - "8080:8080"
+
+data:
+  image: manicmonkey/docker-youtrack
+  container_name: youtrack_data
+  volumes:
+    - /data
+  entrypoint: /bin/bash
