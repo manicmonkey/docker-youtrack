@@ -4,7 +4,7 @@ MAINTAINER James Baxter <j.w.baxter@gmail.com>
 # Download youtrack
 WORKDIR /opt
 RUN apt-get update -q && apt-get install wget -qqy
-RUN wget -O youtrack.jar https://download.jetbrains.com/charisma/youtrack-7.0.27705.jar
+RUN wget -O youtrack.jar https://download.jetbrains.com/charisma/youtrack-7.0.27965.jar
 
 VOLUME ["/data"]
 EXPOSE 8080
