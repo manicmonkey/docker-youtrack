@@ -4,6 +4,7 @@ web:
     - data
   ports:
     - "8080:8080"
+  restart: always
 
 data:
   image: manicmonkey/youtrack:7
